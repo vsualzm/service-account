@@ -45,9 +45,9 @@ func main() {
 	router.POST("/login", accountHandler.LoginAccount)
 
 	// tabung dan tarik
-	router.POST("transaction/tarik-saldo", accountHandler.Tarik, middleware.AuthMiddleware)
-	router.POST("transaction/tabung-saldo", accountHandler.Tabung, middleware.AuthMiddleware)
-	router.GET("transaction/get-saldo/:norekening", accountHandler.CheckSaldo, middleware.AuthMiddleware)
+	router.POST("transaction/tarik", accountHandler.Tarik, middleware.AuthMiddleware)
+	router.POST("transaction/tabung", accountHandler.Tabung, middleware.AuthMiddleware)
+	router.GET("transaction/saldo/:norekening", accountHandler.CheckSaldo, middleware.AuthMiddleware)
 
 	// start server
 	router.Logger.Fatal(router.Start(":8080"))

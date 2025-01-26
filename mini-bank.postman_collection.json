@@ -14,7 +14,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\" : \"johndoe@example.com\",\r\n    \"password\": \"password123\"\r\n}",
+					"raw": "{\r\n    \"email\" : \"ozan@example.com\",\r\n    \"password\": \"password123\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -41,7 +41,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n   \"nama\": \"John Doe\",\r\n   \"email\": \"johndoe@example.com\",\r\n   \"password_hash\": \"password123\",\r\n   \"nik\": \"1234567890123456\",\r\n   \"no_hp\": \"081234567890\"\r\n}",
+					"raw": "{\r\n   \"nama\": \"ozan\",\r\n   \"email\": \"ozan@example.com\",\r\n   \"password_hash\": \"password123\",\r\n   \"nik\": \"3213213211\",\r\n   \"no_hp\": \"081221418513\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -84,7 +84,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"no_rekening\" : \"8658611848\",\r\n    \"saldo\" : 20000.00\r\n}",
+					"raw": "{\r\n    \"no_rekening\" : \"1693688875\",\r\n    \"saldo\" : 1000.00\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -92,14 +92,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/transaction/tabung-saldo",
+					"raw": "localhost:8080/transaction/tabung",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"transaction",
-						"tabung-saldo"
+						"tabung"
 					]
 				}
 			},
@@ -112,13 +112,13 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "{{vault:json-web-token}}",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzc4ODE1MjEsImlkIjoxLCJyb2xlcyI6IkFETUlOIn0.Boqt1IfK6L5adqdqFWODdtBXBj5vkh9ImulqMEqBZzg",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"no_rekening\" : \"8658611848\",\r\n    \"saldo\" : 20000.00\r\n}",
+					"raw": "{\r\n    \"no_rekening\" : \"1693688875\",\r\n    \"saldo\" : 500.00\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -126,14 +126,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/transaction/tarik-saldo",
+					"raw": "localhost:8080/transaction/tarik",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"transaction",
-						"tarik-saldo"
+						"tarik"
 					]
 				}
 			},
@@ -141,25 +141,37 @@
 		},
 		{
 			"name": "check-saldo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "{{vault:json-web-token}}",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzc4ODE1MjEsImlkIjoxLCJyb2xlcyI6IkFETUlOIn0.Boqt1IfK6L5adqdqFWODdtBXBj5vkh9ImulqMEqBZzg",
 						"type": "text"
 					}
 				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "localhost:8080/transaction/get-saldo/8658611848",
+					"raw": "localhost:8080/transaction/saldo/1693688875",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"transaction",
-						"get-saldo",
-						"8658611848"
+						"saldo",
+						"1693688875"
 					]
 				}
 			},
