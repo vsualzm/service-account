@@ -50,7 +50,6 @@ func main() {
 	router.GET("transaction/get-saldo/:norekening", accountHandler.CheckSaldo, middleware.AuthMiddleware)
 
 	// start server
-	log.Println("Server running on port 8080")
 	router.Logger.Fatal(router.Start(":8080"))
 
 }

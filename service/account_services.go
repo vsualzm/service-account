@@ -127,7 +127,7 @@ func (s *accountService) Tabung(accountReq *model.TransactionReq, userId int) (*
 		CodeTrasaction: generateCodes,
 		Total_amount:   accountReq.Saldo,
 		Status:         "SUCCESS",
-		Remark:         "Tarik Saldo",
+		Remark:         "Tabung Saldo",
 	}
 
 	log.Println("masuk -------> 2", transactionReq)
